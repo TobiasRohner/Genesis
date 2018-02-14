@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4844b4c3-2c9f-4d8e-b5b7-1b3cf37c62fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/MITLicense.txt" afterPath="$PROJECT_DIR$/nbproject/MITLicense.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" afterPath="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utilities/StoreDatabase.java" afterPath="$PROJECT_DIR$/src/Utilities/StoreDatabase.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,12 +39,12 @@
       <file leaf-file-name="StoreDatabase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Utilities/StoreDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+            <state relative-caret-position="357">
+              <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +97,8 @@
         <option value="$PROJECT_DIR$/src/Features/operations/BroughtOwnCupClaim.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java" />
-        <option value="$PROJECT_DIR$/src/Utilities/StoreDatabase.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" />
+        <option value="$PROJECT_DIR$/src/Utilities/StoreDatabase.java" />
       </list>
     </option>
   </component>
@@ -417,7 +417,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518642054633" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518642125465" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -465,7 +465,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518642054633" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518642125466" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -831,12 +831,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utilities/StoreDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+        <state relative-caret-position="357">
+          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
           </folding>
         </state>
       </provider>

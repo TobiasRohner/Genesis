@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class StoreDatabase {
 
     private static StoreDatabase instance = null;
-    private HashMap<Long, PublicKey> id_to_pubkey;
+    private HashMap<Long, PublicKey> id_to_pubkey = new HashMap<>();
 
     private StoreDatabase() {
         // Nothing to do here
