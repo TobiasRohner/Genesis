@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Features.operations.actions.BringOwnCupAction;
+import Features.operations.actions.EActionType;
 import Features.operations.actions.IAction;
 import Repository.IRepository;
 import Token.IToken;
+import Utilities.StoreDatabase;
 
 /**
  * Created by Tobias on 14.02.2018.
@@ -34,7 +36,30 @@ public class BringOwnCupOperation extends AOperation {
 
     @Override
     public boolean write(IToken token, IClaim claim) {
-        //TODO: Implement
+        // Verify whether the claim is of the right type
+        if(claim.getAction()==null)
+            return false;
+        if(!claim.getAction().getType().equals(EActionType.BRING_OWN_CUP))
+            return false;
+        if(!(claim.getAction() instanceof BringOwnCupAction))
+            return false;
+        // Verify the proof for the claim
+        boolean valid;
+        try {
+            valid = verifyClaim(claim,
+                                StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)claim.getAction()).getStoreID()),
+                                "DSA"); // Just use DSA for the moment
+        }
+        catch (Exception e) {
+            return false;
+        }
+        if (!valid)
+            return false;
+        //TODO: Find out what sort of OperationProof to give the store operation
+        if (repo.store(claim.getAction(), null /*claim.getProof()*/)) {
+            //TODO: Give some reward
+            return true;
+        }
         return false;
     }
 
@@ -59,6 +84,7 @@ public class BringOwnCupOperation extends AOperation {
      * @param claim The claim object to verify.
      * @param public_key The public key of the instance that signed the data
      * @param signature_algorithm The signature algorithm to be used
+     * @return Whether the proof is valid or not
      */
     private boolean verifyClaim(IClaim claim,
                                 PublicKey public_key,
