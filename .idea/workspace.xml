@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4844b4c3-2c9f-4d8e-b5b7-1b3cf37c62fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/MITLicense.txt" afterPath="$PROJECT_DIR$/nbproject/MITLicense.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java" afterPath="$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" afterPath="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" afterPath="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,29 +18,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BringOwnCupAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="70" lean-forward="true" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BroughtOwnCupClaim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Features/operations/BroughtOwnCupClaim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IActionProof.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/IActionProof.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,15 +48,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="IOperation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Features/IOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BringOwnCupActionProof.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-              <folding>
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-              </folding>
+              <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,34 +71,32 @@
       <file leaf-file-name="BringOwnCupOperation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="329">
+              <caret line="54" column="76" lean-forward="false" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IClaim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Features/operations/IClaim.java">
+      <file leaf-file-name="BringOwnCupAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="525">
+              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StandardClaim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Features/operations/StandardClaim.java">
+      <file leaf-file-name="IRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/IRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="392">
+              <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -138,9 +123,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Features/operations/actions/EActionType.java" />
-        <option value="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
         <option value="$PROJECT_DIR$/src/Utilities/IAddress.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BroughtOwnCupClaim.java" />
+        <option value="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" />
       </list>
@@ -460,7 +445,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518628080225" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518638053043" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -508,7 +493,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518628080225" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518638053043" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -755,22 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="70" lean-forward="true" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/IRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/FeatureType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -806,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/IClaim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/operations/IOperationProof.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -822,37 +783,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/SimpleValueTransactionOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          <folding>
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/IFeature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/IOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -865,16 +799,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/IOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/IClaim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/IRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/BringOwnCupActionProof.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/SimpleValueTransactionOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="83" column="53" lean-forward="true" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="329">
+          <caret line="54" column="76" lean-forward="false" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
           </folding>
         </state>
       </provider>

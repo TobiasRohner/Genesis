@@ -8,12 +8,12 @@ import java.security.Signature;
 
 public class BringOwnCupActionProof implements IActionProof {
 
-    private Signature signature;
+    private byte[] signature_bytes;
 
-    public BringOwnCupActionProof(Signature signature) {
-        this.signature = signature;
+    public BringOwnCupActionProof(byte[] signature_bytes) {
+        this.signature_bytes = signature_bytes;
     }
 
-    public Signature getSignature() { return signature; }
+    public byte[] getSignatureBytes() { return signature_bytes; }
 
 }
