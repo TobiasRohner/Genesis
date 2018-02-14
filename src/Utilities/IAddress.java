@@ -10,5 +10,7 @@ package Utilities;
  * @author mcb
  */
 public interface IAddress {
+
+    long getAddress();
     
 }
