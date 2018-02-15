@@ -17,7 +17,7 @@ import Token.IToken;
  */
 public class StoreDatabase {
 
-    private static StoreDatabase instance = null;
+    private static StoreDatabase instance = new StoreDatabase();
     private HashMap<Long, AbstractMap.SimpleEntry<PublicKey, IToken>> id_to_pubkey_token = new HashMap<>();
 
     private StoreDatabase() {
@@ -25,8 +25,6 @@ public class StoreDatabase {
     }
 
     public static StoreDatabase getInstance() {
-        if (instance == null)
-            instance = new StoreDatabase();
         return instance;
     }
 
