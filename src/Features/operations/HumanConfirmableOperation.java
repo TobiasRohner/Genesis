@@ -46,9 +46,17 @@ public class HumanConfirmableOperation extends AOperation {
         // Verify the proof for the claim
         boolean valid;
         try {
-            valid = verifyClaim(claim,
-                                StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)claim.getAction()).getStoreID()),
-                                "DSA"); // Just use DSA for the moment
+            // Currently we know the action is an instance of BringOwnCupAction
+            // This may and will change in the future, so a distinction between those has to be mad
+            switch (action.getType()) {
+                case BRING_OWN_CUP:
+                    valid = verifyClaim(claim,
+                            StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)action).getStoreID()),
+                            "DSA"); // Just use DSA for the moment
+                    break;
+                default:
+                    return false;
+            }
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
@@ -61,6 +69,7 @@ public class HumanConfirmableOperation extends AOperation {
         if (repo.store(claim.getAction(), null /*claim.getProof()*/)) {
             // Give the reward
             token.generate(action.getCustomerAddress(), action.getReward());
+            //TODO: Implement reputation
             return true;
         }
         return false;
