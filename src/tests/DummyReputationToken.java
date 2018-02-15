@@ -86,11 +86,6 @@ public class DummyReputationToken implements IToken {
 
     @Override
     public boolean generate(IAddress address, int value) {
-        System.out.print("Generated ");
-        System.out.print(value);
-        System.out.print(getSymbol());
-        System.out.print(" to address ");
-        System.out.println(address.getAddress());
         return repo.generate(this, address, value);
     }
 
