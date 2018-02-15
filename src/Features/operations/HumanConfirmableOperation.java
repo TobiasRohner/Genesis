@@ -44,6 +44,7 @@ public class HumanConfirmableOperation extends AOperation {
             return false;
         if(!(claim.getAction() instanceof AHumanConfirmableAction))
             return false;
+        AHumanConfirmableAction action = (AHumanConfirmableAction) claim.getAction();
         // Verify the proof for the claim
         boolean valid;
         try {
@@ -57,9 +58,11 @@ public class HumanConfirmableOperation extends AOperation {
         }
         if (!valid)
             return false;
-        //TODO: Find out what sort of OperationProof to give the store operation
+
+        // Give the reward
         if (repo.store(claim.getAction(), null /*claim.getProof()*/)) {
-            //TODO: Give some reward
+            // Give the reward
+            token.generate(action.getCustomerAddress(), action.getReward());
             return true;
         }
         return false;

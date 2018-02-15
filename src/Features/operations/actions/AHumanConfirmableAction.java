@@ -1,5 +1,8 @@
 package Features.operations.actions;
 
+import Token.IToken;
+import Utilities.IAddress;
+
 /**
  * Created by Tobias on 15.02.2018.
  */
@@ -7,6 +10,8 @@ package Features.operations.actions;
 public abstract class AHumanConfirmableAction implements IAction {
 
     protected String description;
+    protected IAddress customer_address;
+    protected int reward;
 
     public AHumanConfirmableAction() {
         // Nothing to do here
@@ -18,6 +23,10 @@ public abstract class AHumanConfirmableAction implements IAction {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+    public IAddress getCustomerAddress() { return customer_address; }
+    public void setCustomerAddress(IAddress address) { customer_address = address; }
+    public int getReward() { return reward; }
+    public void setReward(int reward) { this.reward = reward; }
 
     @Override
     public EActionType getType() { return EActionType.HUMAN_CONFIRMABLE; }

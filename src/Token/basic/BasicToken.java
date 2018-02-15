@@ -183,6 +183,18 @@ public class BasicToken<A extends IOperation, P extends IProperty,U extends IUnd
     }
 
     @Override
+    public boolean transfer(IAddress from, IAddress to, int value) {
+        //TODO: Implement
+        return true;
+    }
+
+    @Override
+    public boolean generate(IAddress address, int value) {
+        //TODO: Implement
+        return true;
+    }
+
+    @Override
     public boolean addClaim(IClaim claim) {
         boolean successfullClaimed = false;
         for(IOperation operation : this.operations){

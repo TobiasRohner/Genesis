@@ -1,7 +1,6 @@
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
-import java.security.PublicKey;
 import java.security.Signature;
 
 import Features.operations.HumanConfirmableActionProof;
@@ -12,7 +11,7 @@ import Features.operations.actions.BringOwnCupAction;
 import Utilities.StoreDatabase;
 import tests.Address;
 import tests.DummyRepo;
-import tests.DummyToken;
+import tests.DummyValueToken;
 
 /**
  * Created by Tobias on 15.02.2018.
@@ -33,7 +32,7 @@ public class Main {
         HumanConfirmableOperation hco = new HumanConfirmableOperation(repo);
 
         // Get an action from the operation object (At the moment, we know its a BringOwnCupAction
-        BringOwnCupAction action = (BringOwnCupAction) hco.getNextAction();
+        BringOwnCupAction action = (BringOwnCupAction)hco.getNextAction();
         System.out.print("Action: ");
         System.out.println(action.getDescription());
 
@@ -53,7 +52,7 @@ public class Main {
         HumanConfirmableClaim claim = new HumanConfirmableClaim(action, proof);
 
         // Send the claim to the operation object to get the reward
-        boolean result = hco.write(new DummyToken(), claim);
+        boolean result = hco.write(new DummyValueToken(), claim);
         System.out.print("Got reward for valid proof: ");
         System.out.println(result);
 
@@ -61,7 +60,7 @@ public class Main {
         byte[] false_signature = {0,0,0,0,0,0,0,0,0,0,0};
         HumanConfirmableActionProof false_proof = new HumanConfirmableActionProof(false_signature);
         HumanConfirmableClaim false_claim = new HumanConfirmableClaim(action, false_proof);
-        boolean false_result = hco.write(new DummyToken(), false_claim);
+        boolean false_result = hco.write(new DummyValueToken(), false_claim);
         System.out.print("Got reward for invalid proof: ");
         System.out.println(false_result);
     }

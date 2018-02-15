@@ -76,7 +76,8 @@ public interface IToken<U extends IUnderlying, P extends IProperty, B extends IO
    public int getBalanceOf(IAddress addr);
    public Map<IAddress,Integer> getAllBalances();
    
-   //public boolean transfer(IAddress from, IAddress to, int value);
+   public boolean transfer(IAddress from, IAddress to, int value);
+   public boolean generate(IAddress address, int value);
    
    /**
     * Underlyings of the Token

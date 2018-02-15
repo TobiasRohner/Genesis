@@ -11,7 +11,7 @@ import Utilities.IAddress;
  * Created by Tobias on 15.02.2018.
  */
 
-public class DummyToken implements IToken {
+public class DummyValueToken implements IToken {
 
     @Override
     public long getUniqueID() {
@@ -20,7 +20,7 @@ public class DummyToken implements IToken {
 
     @Override
     public String getName() {
-        return "DummyToken";
+        return "DummyValueToken";
     }
 
     @Override
@@ -66,6 +66,28 @@ public class DummyToken implements IToken {
     @Override
     public Map<IAddress, Integer> getAllBalances() {
         return null;
+    }
+
+    @Override
+    public boolean transfer(IAddress from, IAddress to, int value) {
+        System.out.print("Moved ");
+        System.out.print(value);
+        System.out.print(getSymbol());
+        System.out.print(" from address ");
+        System.out.print(from.getAddress());
+        System.out.print(" to address ");
+        System.out.println(to);
+        return true;
+    }
+
+    @Override
+    public boolean generate(IAddress address, int value) {
+        System.out.print("Generated ");
+        System.out.print(value);
+        System.out.print(getSymbol());
+        System.out.print(" to address ");
+        System.out.println(address.getAddress());
+        return true;
     }
 
     @Override

@@ -8,20 +8,20 @@ import Utilities.IAddress;
 
 public class BringOwnCupAction extends AHumanConfirmableAction {
 
-    private IAddress customer_address;
     private long     store_id;
 
     public BringOwnCupAction() {
         super("Bring your own cup to a coffee shop.");
+        this.reward = 1;
     }
 
     public BringOwnCupAction(IAddress customer_address, long store_id) {
+        super("Bring your own cup to a coffee shop.");
         this.customer_address = customer_address;
         this.store_id = store_id;
+        this.reward = 1;    // The reward for bringing the own cup should be 1 coin
     }
 
-    public IAddress getCustomerAddress() { return customer_address; }
-    public void setCustomerAddress(IAddress address) { customer_address = address; }
     public long getStoreID() { return store_id; }
     public void setStoreID(long id) { store_id = id; }
 
