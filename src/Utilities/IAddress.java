@@ -12,5 +12,6 @@ package Utilities;
 public interface IAddress {
 
     long getAddress();
+    void setAddress(long address);
     
 }
