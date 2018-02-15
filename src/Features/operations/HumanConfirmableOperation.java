@@ -26,7 +26,7 @@ public class HumanConfirmableOperation extends AOperation {
     @Override
     public List<IAction> getActions() {
         List<IAction> returnList = new ArrayList();
-        returnList.add(getNextAction());
+        returnList.add(new BringOwnCupAction());
         return returnList;
     }
 
