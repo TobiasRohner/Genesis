@@ -48,8 +48,6 @@ public class HumanConfirmableOperation extends AOperation {
         // Verify the proof for the claim
         boolean valid;
         try {
-            // Currently we know the action is an instance of BringOwnCupAction
-            // This may and will change in the future, so a distinction between those has to be mad
             valid = verifyClaim(claim,
                                 StoreDatabase.getInstance().getPublicKey(action.getStoreID()),
                                 "DSA"); // Just use DSA for the moment
