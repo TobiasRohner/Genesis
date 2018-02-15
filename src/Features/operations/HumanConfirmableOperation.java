@@ -52,6 +52,7 @@ public class HumanConfirmableOperation extends AOperation {
                                 "DSA"); // Just use DSA for the moment
         }
         catch (Exception e) {
+            System.out.print(e.getMessage());
             return false;
         }
         if (!valid)

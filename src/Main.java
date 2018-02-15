@@ -12,6 +12,7 @@ import Features.operations.actions.BringOwnCupAction;
 import Utilities.StoreDatabase;
 import tests.Address;
 import tests.DummyRepo;
+import tests.DummyToken;
 
 /**
  * Created by Tobias on 15.02.2018.
@@ -52,7 +53,17 @@ public class Main {
         HumanConfirmableClaim claim = new HumanConfirmableClaim(action, proof);
 
         // Send the claim to the operation object to get the reward
-        //TODO: Implement
+        boolean result = hco.write(new DummyToken(), claim);
+        System.out.print("Got reward for valid proof: ");
+        System.out.println(result);
+
+        // Test it with a false proof
+        byte[] false_signature = {0,0,0,0,0,0,0,0,0,0,0};
+        HumanConfirmableActionProof false_proof = new HumanConfirmableActionProof(false_signature);
+        HumanConfirmableClaim false_claim = new HumanConfirmableClaim(action, false_proof);
+        boolean false_result = hco.write(new DummyToken(), false_claim);
+        System.out.print("Got reward for invalid proof: ");
+        System.out.println(false_result);
     }
 
     // Helper function to sign human readable actions

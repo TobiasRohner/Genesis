@@ -72,7 +72,7 @@ public class DummyRepo implements IRepository {
 
     @Override
     public boolean store(IAction action, IOperationProof proof) {
-        return false;
+        return true;
     }
 
     @Override
