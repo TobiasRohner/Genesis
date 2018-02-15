@@ -30,11 +30,19 @@ public class StoreDatabase {
         return instance;
     }
 
+    public boolean containsStore(long store_id) {
+        return id_to_pubkey_token.containsKey(new Long(store_id));
+    }
+
     public PublicKey getPublicKey(long store_id) {
+        if (!id_to_pubkey_token.containsKey(new Long(store_id)))
+            return null;
         return id_to_pubkey_token.get(new Long(store_id)).getKey();
     }
 
     public IToken getReputationToken(long store_id) {
+        if (!id_to_pubkey_token.containsKey(new Long(store_id)))
+            return null;
         return id_to_pubkey_token.get(new Long(store_id)).getValue();
     }
 
