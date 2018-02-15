@@ -22,14 +22,16 @@ import tests.DummyValueToken;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+        // Initialize the repository
+        DummyRepo repo = new DummyRepo();
+
         // Add a store to the store database with index 0x0000000000000000
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("DSA");
         kpg.initialize(512);
         KeyPair kp = kpg.generateKeyPair();
-        StoreDatabase.getInstance().addStore(0x0000000000000000, kp.getPublic(), new DummyReputationToken());
+        StoreDatabase.getInstance().addStore(0x0000000000000000, kp.getPublic(), new DummyReputationToken(repo));
 
         // Create a new instance of a HumanConfirmableOperation to test it
-        DummyRepo repo = new DummyRepo();
         HumanConfirmableOperation hco = new HumanConfirmableOperation(repo);
 
         // Get an action from the operation object (At the moment, we know its a BringOwnCupAction
@@ -53,7 +55,7 @@ public class Main {
         HumanConfirmableClaim claim = new HumanConfirmableClaim(action, proof);
 
         // Send the claim to the operation object to get the reward
-        boolean result = hco.write(new DummyValueToken(), claim);
+        boolean result = hco.write(new DummyValueToken(repo), claim);
         System.out.print("Got reward for valid proof: ");
         System.out.println(result);
 
@@ -61,9 +63,15 @@ public class Main {
         byte[] false_signature = {0,0,0,0,0,0,0,0,0,0,0};
         HumanConfirmableActionProof false_proof = new HumanConfirmableActionProof(false_signature);
         HumanConfirmableClaim false_claim = new HumanConfirmableClaim(action, false_proof);
-        boolean false_result = hco.write(new DummyValueToken(), false_claim);
+        boolean false_result = hco.write(new DummyValueToken(repo), false_claim);
         System.out.print("Got reward for invalid proof: ");
         System.out.println(false_result);
+
+        // Finally print out the balances of address 1
+        System.out.print(repo.getBalanceOf(new DummyValueToken(repo), address));
+        System.out.println(new DummyValueToken(repo).getSymbol());
+        System.out.print(repo.getBalanceOf(new DummyReputationToken(repo), address));
+        System.out.println(new DummyReputationToken(repo).getSymbol());
     }
 
     // Helper function to sign human readable actions

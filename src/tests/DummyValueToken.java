@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 
 import Features.operations.IClaim;
+import Repository.IRepository;
 import Token.IToken;
 import Utilities.IAddress;
 
@@ -16,6 +17,12 @@ import Utilities.IAddress;
  * as it is not crucial for the proof of concept.
  */
 public class DummyValueToken implements IToken {
+
+    private IRepository repo;
+
+    public DummyValueToken(IRepository repo) {
+        this.repo = repo;
+    }
 
     @Override
     public long getUniqueID() {
@@ -64,34 +71,22 @@ public class DummyValueToken implements IToken {
 
     @Override
     public int getBalanceOf(IAddress addr) {
-        return 0;
+        return repo.getBalanceOf(this, addr);
     }
 
     @Override
     public Map<IAddress, Integer> getAllBalances() {
-        return null;
+        return repo.getAllBalances(this);
     }
 
     @Override
     public boolean transfer(IAddress from, IAddress to, int value) {
-        System.out.print("Moved ");
-        System.out.print(value);
-        System.out.print(getSymbol());
-        System.out.print(" from address ");
-        System.out.print(from.getAddress());
-        System.out.print(" to address ");
-        System.out.println(to);
-        return true;
+        return repo.transfer(this, from, to, value);
     }
 
     @Override
     public boolean generate(IAddress address, int value) {
-        System.out.print("Generated ");
-        System.out.print(value);
-        System.out.print(getSymbol());
-        System.out.print(" to address ");
-        System.out.println(address.getAddress());
-        return true;
+        return repo.generate(this, address, value);
     }
 
     @Override

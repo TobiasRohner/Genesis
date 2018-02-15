@@ -116,6 +116,10 @@ public interface IRepository<T extends IToken> {
      * @return 
      */
     Map<IAddress, Integer> getAllBalances(T token);
+
+    public boolean transfer(IToken token, IAddress from, IAddress to, int value);
+
+    public boolean generate(IToken token, IAddress addr, int value);
           
     /**
      * Stores action to database. I.e. value (trans)action

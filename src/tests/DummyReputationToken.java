@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 
 import Features.operations.IClaim;
+import Repository.IRepository;
 import Token.IToken;
 import Utilities.IAddress;
 
@@ -16,6 +17,13 @@ import Utilities.IAddress;
  * as it is not crucial for the proof of concept.
  */
 public class DummyReputationToken implements IToken {
+
+    private IRepository repo;
+
+    public DummyReputationToken(IRepository repo) {
+        this.repo = repo;
+    }
+
     @Override
     public long getUniqueID() {
         return 1;
@@ -73,14 +81,7 @@ public class DummyReputationToken implements IToken {
 
     @Override
     public boolean transfer(IAddress from, IAddress to, int value) {
-        System.out.print("Moved ");
-        System.out.print(value);
-        System.out.print(getSymbol());
-        System.out.print(" from address ");
-        System.out.print(from.getAddress());
-        System.out.print(" to address ");
-        System.out.println(to);
-        return true;
+        return false;
     }
 
     @Override
@@ -90,7 +91,7 @@ public class DummyReputationToken implements IToken {
         System.out.print(getSymbol());
         System.out.print(" to address ");
         System.out.println(address.getAddress());
-        return true;
+        return repo.generate(this, address, value);
     }
 
     @Override
