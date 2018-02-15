@@ -21,6 +21,6 @@ public class BringOwnPlateAction extends AHumanConfirmableAction {
     }
 
     @Override
-    public EActionType getType() { return EActionType.BRING_OWN_CUP; }
+    public EActionType getType() { return EActionType.BRING_OWN_PLATE; }
 
 }
