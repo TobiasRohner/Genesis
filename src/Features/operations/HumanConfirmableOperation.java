@@ -5,6 +5,7 @@ import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
+import Features.operations.actions.AHumanConfirmableAction;
 import Features.operations.actions.BringOwnCupAction;
 import Features.operations.actions.EActionType;
 import Features.operations.actions.IAction;
@@ -39,9 +40,9 @@ public class HumanConfirmableOperation extends AOperation {
         // Verify whether the claim is of the right type
         if(claim.getAction()==null)
             return false;
-        if(!claim.getAction().getType().equals(EActionType.BRING_OWN_CUP))
+        if(!claim.getAction().getType().equals(EActionType.HUMAN_CONFIRMABLE))
             return false;
-        if(!(claim.getAction() instanceof BringOwnCupAction))
+        if(!(claim.getAction() instanceof AHumanConfirmableAction))
             return false;
         // Verify the proof for the claim
         boolean valid;

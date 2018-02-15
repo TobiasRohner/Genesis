@@ -19,4 +19,7 @@ public abstract class AHumanConfirmableAction implements IAction {
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 
+    @Override
+    public EActionType getType() { return EActionType.HUMAN_CONFIRMABLE; }
+
 }

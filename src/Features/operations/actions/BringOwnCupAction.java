@@ -25,7 +25,4 @@ public class BringOwnCupAction extends AHumanConfirmableAction {
     public long getStoreID() { return store_id; }
     public void setStoreID(long id) { store_id = id; }
 
-    @Override
-    public EActionType getType() { return EActionType.BRING_OWN_CUP; }
-
 }
