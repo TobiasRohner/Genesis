@@ -40,8 +40,6 @@ public class HumanConfirmableOperation extends AOperation {
         // Verify whether the claim is of the right type
         if(claim.getAction()==null)
             return false;
-        if(!claim.getAction().getType().equals(EActionType.HUMAN_CONFIRMABLE))
-            return false;
         if(!(claim.getAction() instanceof AHumanConfirmableAction))
             return false;
         AHumanConfirmableAction action = (AHumanConfirmableAction) claim.getAction();

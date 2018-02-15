@@ -30,5 +30,5 @@ package Features.operations.actions;
  */
 public enum EActionType {
     TRANSACTION,
-    HUMAN_CONFIRMABLE
+    BRING_OWN_CUP
 }

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4844b4c3-2c9f-4d8e-b5b7-1b3cf37c62fd" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/DummyToken.java" afterPath="$PROJECT_DIR$/src/tests/DummyValueToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/MITLicense.txt" afterPath="$PROJECT_DIR$/nbproject/MITLicense.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java" afterPath="$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java" afterPath="$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" afterPath="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Token/IToken.java" afterPath="$PROJECT_DIR$/src/Token/IToken.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Token/basic/BasicToken.java" afterPath="$PROJECT_DIR$/src/Token/basic/BasicToken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Features/operations/actions/EActionType.java" afterPath="$PROJECT_DIR$/src/Features/operations/actions/EActionType.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +19,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BringOwnCupAction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BringOwnCupAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+            <state relative-caret-position="588">
+              <caret line="28" column="67" lean-forward="false" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EActionType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/EActionType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -45,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumanConfirmableOperation.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HumanConfirmableOperation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="64" column="76" lean-forward="true" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
+            <state relative-caret-position="74">
+              <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,7 +66,7 @@
       <file leaf-file-name="AHumanConfirmableAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="378">
               <caret line="28" column="63" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,19 +112,19 @@
         <option value="$PROJECT_DIR$/src/Utilities/StoreDatabase.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/BringOwnCupOperation.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/actions/HumanConfirmableAction.java" />
-        <option value="$PROJECT_DIR$/src/Features/operations/actions/EActionType.java" />
         <option value="$PROJECT_DIR$/src/tests/Address.java" />
         <option value="$PROJECT_DIR$/src/Utilities/IAddress.java" />
         <option value="$PROJECT_DIR$/src/tests/DummyToken.java" />
         <option value="$PROJECT_DIR$/src/tests/DummyRepo.java" />
         <option value="$PROJECT_DIR$/src/tests/DummyReputationToken.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java" />
         <option value="$PROJECT_DIR$/src/Token/IToken.java" />
         <option value="$PROJECT_DIR$/src/Token/basic/BasicToken.java" />
-        <option value="$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java" />
         <option value="$PROJECT_DIR$/src/tests/DummyValueToken.java" />
+        <option value="$PROJECT_DIR$/src/Features/operations/actions/EActionType.java" />
+        <option value="$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java" />
         <option value="$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java" />
+        <option value="$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java" />
       </list>
     </option>
   </component>
@@ -461,7 +467,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518693384758" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518696320928" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -508,7 +514,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518693384758" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518696320928" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1022,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/EActionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/IAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1082,19 +1080,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java">
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/EActionType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="64" column="76" lean-forward="true" selection-start-line="64" selection-start-column="76" selection-end-line="64" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/AHumanConfirmableAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="378">
           <caret line="28" column="63" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1104,9 +1100,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Features/operations/actions/BringOwnCupAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        <state relative-caret-position="588">
+          <caret line="28" column="67" lean-forward="false" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Features/operations/HumanConfirmableOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

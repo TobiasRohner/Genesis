@@ -28,7 +28,4 @@ public abstract class AHumanConfirmableAction implements IAction {
     public int getReward() { return reward; }
     public void setReward(int reward) { this.reward = reward; }
 
-    @Override
-    public EActionType getType() { return EActionType.HUMAN_CONFIRMABLE; }
-
 }
