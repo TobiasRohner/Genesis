@@ -24,13 +24,13 @@ public class BringOwnCupOperation extends AOperation {
 
     @Override
     public List<IAction> getActions() {
-        //TODO: Implement
-        return new ArrayList<IAction>();
+        List<IAction> returnList = new ArrayList();
+        returnList.add(getNextAction());
+        return returnList;
     }
 
     @Override
     public IAction getNextAction() {
-        //TODO: Implement
         return new BringOwnCupAction();
     }
 
@@ -65,7 +65,7 @@ public class BringOwnCupOperation extends AOperation {
 
     @Override
     public void resetOperation() {
-        //TODO: Implement
+        // Should be right to leave this empty
     }
 
     @Override
