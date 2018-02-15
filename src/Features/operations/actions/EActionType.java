@@ -33,7 +33,7 @@ public enum EActionType {
     BRING_OWN_CUP,
     BRING_OWN_PLATE;
 
-    public IAction EActionType(String name) {
+    public static IAction actionFromString(String name) {
         switch (name) {
             case "TRANSACTION":
                 return new TransactionAction();
