@@ -33,7 +33,7 @@ public class Main {
         HumanConfirmableOperation hco = new HumanConfirmableOperation(repo);
 
         // Get an action from the operation object (At the moment, we know its a BringOwnCupAction
-        BringOwnCupAction action = (BringOwnCupAction)hco.getNextAction();
+        AHumanConfirmableAction action = (AHumanConfirmableAction)hco.getNextAction();
         System.out.print("Action: ");
         System.out.println(action.getDescription());
 

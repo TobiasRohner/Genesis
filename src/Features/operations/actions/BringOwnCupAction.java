@@ -8,8 +8,6 @@ import Utilities.IAddress;
 
 public class BringOwnCupAction extends AHumanConfirmableAction {
 
-    private long store_id;
-
     public BringOwnCupAction() {
         super("Bring your own cup to a coffee shop.");
         this.reward = 1;
@@ -21,9 +19,6 @@ public class BringOwnCupAction extends AHumanConfirmableAction {
         this.store_id = store_id;
         this.reward = 1;    // The reward for bringing the own cup should be 1 coin
     }
-
-    public long getStoreID() { return store_id; }
-    public void setStoreID(long id) { store_id = id; }
 
     @Override
     public EActionType getType() { return EActionType.BRING_OWN_CUP; }

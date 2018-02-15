@@ -7,6 +7,7 @@ import java.util.List;
 
 import Features.operations.actions.AHumanConfirmableAction;
 import Features.operations.actions.BringOwnCupAction;
+import Features.operations.actions.BringOwnPlateAction;
 import Features.operations.actions.EActionType;
 import Features.operations.actions.IAction;
 import Repository.IRepository;
@@ -27,12 +28,13 @@ public class HumanConfirmableOperation extends AOperation {
     public List<IAction> getActions() {
         List<IAction> returnList = new ArrayList();
         returnList.add(new BringOwnCupAction());
+        returnList.add(new BringOwnPlateAction());
         return returnList;
     }
 
     @Override
     public IAction getNextAction() {
-        return new BringOwnCupAction();
+        return new BringOwnPlateAction();
     }
 
     @Override
@@ -48,15 +50,9 @@ public class HumanConfirmableOperation extends AOperation {
         try {
             // Currently we know the action is an instance of BringOwnCupAction
             // This may and will change in the future, so a distinction between those has to be mad
-            switch (action.getType()) {
-                case BRING_OWN_CUP:
-                    valid = verifyClaim(claim,
-                            StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)action).getStoreID()),
-                            "DSA"); // Just use DSA for the moment
-                    break;
-                default:
-                    return false;
-            }
+            valid = verifyClaim(claim,
+                                StoreDatabase.getInstance().getPublicKey(action.getStoreID()),
+                                "DSA"); // Just use DSA for the moment
         }
         catch (Exception e) {
             System.out.print(e.getMessage());
@@ -70,7 +66,7 @@ public class HumanConfirmableOperation extends AOperation {
             // Give the reward
             token.generate(action.getCustomerAddress(), action.getReward());
             // Give reputation to the customer
-            StoreDatabase.getInstance().getReputationToken(((BringOwnCupAction)action).getStoreID()).generate(action.getCustomerAddress(), 1);
+            StoreDatabase.getInstance().getReputationToken(action.getStoreID()).generate(action.getCustomerAddress(), 1);
             return true;
         }
         return false;

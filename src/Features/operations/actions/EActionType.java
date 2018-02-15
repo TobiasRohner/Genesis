@@ -30,5 +30,6 @@ package Features.operations.actions;
  */
 public enum EActionType {
     TRANSACTION,
-    BRING_OWN_CUP
+    BRING_OWN_CUP,
+    BRING_OWN_PLATE
 }
