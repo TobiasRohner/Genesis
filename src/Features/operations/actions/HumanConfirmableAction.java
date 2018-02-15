@@ -6,23 +6,23 @@ import Utilities.IAddress;
  * Created by Tobias on 14.02.2018.
  */
 
-public class BringOwnCupAction implements IAction {
+public class HumanConfirmableAction implements IAction {
 
     private IAddress customer_address;
     private long     store_id;
 
-    public BringOwnCupAction() {
+    public HumanConfirmableAction() {
         // Nothing to do here
     }
 
-    public BringOwnCupAction(IAddress customer_address, long store_id) {
+    public HumanConfirmableAction(IAddress customer_address, long store_id) {
         this.customer_address = customer_address;
         this.store_id = store_id;
     }
 
     public IAddress getCustomerAddress() { return customer_address; }
     public void setCustomerAddress(IAddress address) { customer_address = address; }
-    public long     getStoreID() { return store_id; }
+    public long getStoreID() { return store_id; }
     public void setStoreID(long id) { store_id = id; }
 
     @Override

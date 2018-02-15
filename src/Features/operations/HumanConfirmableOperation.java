@@ -5,7 +5,7 @@ import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
-import Features.operations.actions.BringOwnCupAction;
+import Features.operations.actions.HumanConfirmableAction;
 import Features.operations.actions.EActionType;
 import Features.operations.actions.IAction;
 import Repository.IRepository;
@@ -16,9 +16,9 @@ import Utilities.StoreDatabase;
  * Created by Tobias on 14.02.2018.
  */
 
-public class BringOwnCupOperation extends AOperation {
+public class HumanConfirmableOperation extends AOperation {
 
-    public BringOwnCupOperation(IRepository repo) {
+    public HumanConfirmableOperation(IRepository repo) {
         super(repo);
     }
 
@@ -31,7 +31,7 @@ public class BringOwnCupOperation extends AOperation {
 
     @Override
     public IAction getNextAction() {
-        return new BringOwnCupAction();
+        return new HumanConfirmableAction();
     }
 
     @Override
@@ -41,13 +41,13 @@ public class BringOwnCupOperation extends AOperation {
             return false;
         if(!claim.getAction().getType().equals(EActionType.BRING_OWN_CUP))
             return false;
-        if(!(claim.getAction() instanceof BringOwnCupAction))
+        if(!(claim.getAction() instanceof HumanConfirmableAction))
             return false;
         // Verify the proof for the claim
         boolean valid;
         try {
             valid = verifyClaim(claim,
-                                StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)claim.getAction()).getStoreID()),
+                                StoreDatabase.getInstance().getPublicKey(((HumanConfirmableAction)claim.getAction()).getStoreID()),
                                 "DSA"); // Just use DSA for the moment
         }
         catch (Exception e) {
@@ -95,9 +95,9 @@ public class BringOwnCupOperation extends AOperation {
         for (int i = 0 ; i < 4 ; ++i) {
             signature.update((byte)(hash >> 8*i));
         }
-        if (!(claim.getProof() instanceof BringOwnCupActionProof))
+        if (!(claim.getProof() instanceof HumanConfirmableActionProof))
             return false;
-        BringOwnCupActionProof proof = (BringOwnCupActionProof)claim.getProof();
+        HumanConfirmableActionProof proof = (HumanConfirmableActionProof)claim.getProof();
         return signature.verify(proof.getSignatureBytes());
     }
 
