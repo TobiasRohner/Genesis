@@ -31,5 +31,18 @@ package Features.operations.actions;
 public enum EActionType {
     TRANSACTION,
     BRING_OWN_CUP,
-    BRING_OWN_PLATE
+    BRING_OWN_PLATE;
+
+    public IAction EActionType(String name) {
+        switch (name) {
+            case "TRANSACTION":
+                return new TransactionAction();
+            case "BRING_OWN_CUP":
+                return new BringOwnCupAction();
+            case "BRING_OWN_PLATE":
+                return new BringOwnPlateAction();
+            default:
+                return null;
+        }
+    }
 }
