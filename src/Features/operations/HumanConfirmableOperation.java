@@ -69,7 +69,8 @@ public class HumanConfirmableOperation extends AOperation {
         if (repo.store(claim.getAction(), null /*claim.getProof()*/)) {
             // Give the reward
             token.generate(action.getCustomerAddress(), action.getReward());
-            //TODO: Implement reputation
+            // Give reputation to the customer
+            StoreDatabase.getInstance().getReputationToken(((BringOwnCupAction)action).getStoreID()).generate(action.getCustomerAddress(), 1);
             return true;
         }
         return false;

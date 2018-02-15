@@ -5,7 +5,10 @@ package Utilities;
  */
 
 import java.security.PublicKey;
+import java.util.AbstractMap;
 import java.util.HashMap;
+
+import Token.IToken;
 
 /**
  * @brief A Database containing the IDs and public keys of all the stores
@@ -15,7 +18,7 @@ import java.util.HashMap;
 public class StoreDatabase {
 
     private static StoreDatabase instance = null;
-    private HashMap<Long, PublicKey> id_to_pubkey = new HashMap<>();
+    private HashMap<Long, AbstractMap.SimpleEntry<PublicKey, IToken>> id_to_pubkey_token = new HashMap<>();
 
     private StoreDatabase() {
         // Nothing to do here
@@ -28,11 +31,15 @@ public class StoreDatabase {
     }
 
     public PublicKey getPublicKey(long store_id) {
-        return id_to_pubkey.get(new Long(store_id));
+        return id_to_pubkey_token.get(new Long(store_id)).getKey();
     }
 
-    public void addStore(long store_id, PublicKey public_key) {
-        id_to_pubkey.put(new Long(store_id), public_key);
+    public IToken getReputationToken(long store_id) {
+        return id_to_pubkey_token.get(new Long(store_id)).getValue();
+    }
+
+    public void addStore(long store_id, PublicKey public_key, IToken reputation_token) {
+        id_to_pubkey_token.put(new Long(store_id), new AbstractMap.SimpleEntry<>(public_key, reputation_token));
     }
 
 }

@@ -11,16 +11,15 @@ import Utilities.IAddress;
  * Created by Tobias on 15.02.2018.
  */
 
-public class DummyValueToken implements IToken {
-
+public class DummyReputationToken implements IToken {
     @Override
     public long getUniqueID() {
-        return 0;
+        return 1;
     }
 
     @Override
     public String getName() {
-        return "DummyValueToken";
+        return "Dummy Reputation Token";
     }
 
     @Override
@@ -30,7 +29,7 @@ public class DummyValueToken implements IToken {
 
     @Override
     public String getSymbol() {
-        return "DVT";
+        return "DRT";
     }
 
     @Override
@@ -109,5 +108,4 @@ public class DummyValueToken implements IToken {
     public boolean addClaim(IClaim claim) {
         return false;
     }
-
 }

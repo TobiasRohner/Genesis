@@ -11,6 +11,7 @@ import Features.operations.actions.BringOwnCupAction;
 import Utilities.StoreDatabase;
 import tests.Address;
 import tests.DummyRepo;
+import tests.DummyReputationToken;
 import tests.DummyValueToken;
 
 /**
@@ -25,7 +26,7 @@ public class Main {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("DSA");
         kpg.initialize(512);
         KeyPair kp = kpg.generateKeyPair();
-        StoreDatabase.getInstance().addStore(0x0000000000000000, kp.getPublic());
+        StoreDatabase.getInstance().addStore(0x0000000000000000, kp.getPublic(), new DummyReputationToken());
 
         // Create a new instance of a HumanConfirmableOperation to test it
         DummyRepo repo = new DummyRepo();
