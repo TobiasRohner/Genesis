@@ -6,16 +6,16 @@ import Utilities.IAddress;
  * Created by Tobias on 14.02.2018.
  */
 
-public class HumanConfirmableAction implements IAction {
+public class BringOwnCupAction extends AHumanConfirmableAction {
 
     private IAddress customer_address;
     private long     store_id;
 
-    public HumanConfirmableAction() {
-        // Nothing to do here
+    public BringOwnCupAction() {
+        super("Bring your own cup to a coffee shop.");
     }
 
-    public HumanConfirmableAction(IAddress customer_address, long store_id) {
+    public BringOwnCupAction(IAddress customer_address, long store_id) {
         this.customer_address = customer_address;
         this.store_id = store_id;
     }

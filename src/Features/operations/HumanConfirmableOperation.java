@@ -5,7 +5,7 @@ import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
-import Features.operations.actions.HumanConfirmableAction;
+import Features.operations.actions.BringOwnCupAction;
 import Features.operations.actions.EActionType;
 import Features.operations.actions.IAction;
 import Repository.IRepository;
@@ -31,7 +31,7 @@ public class HumanConfirmableOperation extends AOperation {
 
     @Override
     public IAction getNextAction() {
-        return new HumanConfirmableAction();
+        return new BringOwnCupAction();
     }
 
     @Override
@@ -41,13 +41,13 @@ public class HumanConfirmableOperation extends AOperation {
             return false;
         if(!claim.getAction().getType().equals(EActionType.BRING_OWN_CUP))
             return false;
-        if(!(claim.getAction() instanceof HumanConfirmableAction))
+        if(!(claim.getAction() instanceof BringOwnCupAction))
             return false;
         // Verify the proof for the claim
         boolean valid;
         try {
             valid = verifyClaim(claim,
-                                StoreDatabase.getInstance().getPublicKey(((HumanConfirmableAction)claim.getAction()).getStoreID()),
+                                StoreDatabase.getInstance().getPublicKey(((BringOwnCupAction)claim.getAction()).getStoreID()),
                                 "DSA"); // Just use DSA for the moment
         }
         catch (Exception e) {
