@@ -17,6 +17,11 @@ import Utilities.IAddress;
  * Created by Tobias on 15.02.2018.
  */
 
+
+/**
+ * This repo just contains mostly empty functions. Its functionality is not used by the actions except
+ * for transferring money.
+ */
 public class DummyRepo implements IRepository {
 
 

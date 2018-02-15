@@ -11,6 +11,10 @@ import Utilities.IAddress;
  * Created by Tobias on 15.02.2018.
  */
 
+/**
+ * A dummy token for the value coin. It does not contain any functionality,
+ * as it is not crucial for the proof of concept.
+ */
 public class DummyValueToken implements IToken {
 
     @Override
