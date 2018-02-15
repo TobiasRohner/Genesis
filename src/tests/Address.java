@@ -8,22 +8,22 @@ import Utilities.IAddress;
 
 public class Address implements IAddress {
 
-    long address;
+    String address;
 
     public Address() {
-        address = 0;
+        address = "0x0000000000000000000000000000000000000000";
     }
 
-    public Address(long address) {
+    public Address(String address) {
         this.address = address;
     }
 
     @Override
-    public long getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(long address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 

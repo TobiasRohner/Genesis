@@ -38,7 +38,7 @@ public class Main {
         System.out.println(action.getDescription());
 
         // Just invent some random customer_address
-        Address address = new Address(0x0000000000000000);
+        Address address = new Address("0x0000000000000000000000000000000000000001");
         action.setCustomerAddress(address);
         // Set the store id to 0x0000000000000000, as it is the only registered store
         action.setStoreID(0x0000000000000000);
